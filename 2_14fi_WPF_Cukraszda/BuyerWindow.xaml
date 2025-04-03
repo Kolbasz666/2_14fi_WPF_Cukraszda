@@ -5,8 +5,59 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_2_14fi_WPF_Cukraszda"
         mc:Ignorable="d"
-        Title="BuyerWindow" Height="450" Width="800">
+        Title="BuyerWindow" Height="600" Width="1000">
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
     <Grid>
-        
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="130"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Image Source="https://karpatiaettermek.hu/wp-content/uploads/2024/07/20240723_144703-1300-731x480.jpg" Stretch="UniformToFill"/>
+        <Label Content="Üdv a Pelikán Cukrászdában" FontSize="50" FontFamily="Algerian">
+            <Label.Background>
+                <SolidColorBrush Color="Beige" Opacity="0.7"/>
+            </Label.Background>
+        </Label>
+        <Grid Grid.Row="1" Background="AliceBlue">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="3" Content="Bejelentkezés" FontSize="25" Cursor="Hand" BorderBrush="Black" BorderThickness="1"/>
+            <Label Grid.Column="2" Content="Kosár" FontSize="25" Cursor="Hand" BorderBrush="Black" BorderThickness="1"/>
+            <Label Grid.Column="0" Content="Termékek" FontSize="25" Cursor="Hand" BorderBrush="Black" BorderThickness="1"/>
+            <Label Grid.Column="1" Content="Rólunk" FontSize="25" Cursor="Hand" BorderBrush="Black" BorderThickness="1"/>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.Background>
+                <SolidColorBrush Color="Goldenrod" Opacity="0.1"/>
+            </Grid.Background>
+            <WrapPanel Name="Items" Orientation="Horizontal">
+                <Grid Height="180" Width="120" Margin="10" Background="Bisque">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="3*"/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Image Grid.Row="1" Source="https://www.szakacsreceptek.hu/_site_media/com_strava/mod_recepty/img_list-by-category/32.jpg" Stretch="UniformToFill"/>
+                    <Label Content="Diós krémes"/>
+                    <Label Content="1000 Ft" Grid.Row="2"/>
+                    <Border Grid.Row="3" Background="GreenYellow" CornerRadius="10" Margin="10 2">
+                        <Label Content="Kosárba" Cursor="Hand" MouseLeftButtonUp="Buy"/>
+                    </Border>
+                </Grid>
+                
+            </WrapPanel>
+        </Grid>
     </Grid>
 </Window>
