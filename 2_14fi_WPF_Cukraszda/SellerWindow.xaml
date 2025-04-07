@@ -12,6 +12,13 @@
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
             <Setter Property="FontSize" Value="25"/>
         </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="Background" Value="AliceBlue"/>
+            <Setter Property="Margin" Value="10"/>
+        </Style>
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -27,6 +34,12 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        
+        <TextBox Grid.Column="1" Grid.Row="0" Name="NameInput" Text="Dobos torta"/>
+        <TextBox Grid.Column="1" Grid.Row="1" Name="PicrureInput" Text="https://kep.cdn.indexvas.hu/1/0/3053/30532/305320/30532067_2344117_077574597bdc9d3d3252e8150d2c4a0a_wm.jpg"/>
+        <TextBox Grid.Column="1" Grid.Row="2" Name="DescriptionInput" Text="Ez itt jó"/>
+        <TextBox Grid.Column="1" Grid.Row="3" Name="AllergenesInput" Text="glutén"/>
+        <TextBox Grid.Column="1" Grid.Row="4" Name="PriceInput" Text="1000"/>
+        <TextBox Grid.Column="1" Grid.Row="5" Name="StockInput" Text="8"/>
+        <Button Grid.ColumnSpan="2" Content="Sütemény hozzáadása" Click="AddCake" Grid.Row="6"/>
     </Grid>
 </Window>

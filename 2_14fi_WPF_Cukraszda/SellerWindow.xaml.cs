@@ -19,9 +19,25 @@ namespace _2_14fi_WPF_Cukraszda
     /// </summary>
     public partial class SellerWindow : Window
     {
+        ServerConnection connection;
         public SellerWindow()
         {
             InitializeComponent();
+            connection = new ServerConnection("http://127.1.1.1:3000");
+        }
+        async void AddCake(object s, EventArgs e)
+        {
+            Cake oneCake = new Cake()
+            {
+                name = NameInput.Text,
+                price = int.Parse(PriceInput.Text),
+                stock = int.Parse(StockInput.Text),
+                picture = PicrureInput.Text,
+                description = DescriptionInput.Text,
+                allergenes = AllergenesInput.Text
+            };
+            await connection.PostCake(oneCake);
+
         }
     }
 }
