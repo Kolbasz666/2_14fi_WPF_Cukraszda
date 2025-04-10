@@ -24,6 +24,25 @@ namespace _2_14fi_WPF_Cukraszda
         {
             InitializeComponent();
             connection = new ServerConnection("http://127.1.1.1:3000");
+            
+        }
+        void OnFocus(object s, EventArgs e)
+        {
+            TextBox oneTextbox = s as TextBox;
+            if (oneTextbox.Text == oneTextbox.Tag.ToString())
+            {
+                oneTextbox.Clear();
+                oneTextbox.Foreground = new SolidColorBrush(Colors.Black);
+            }
+        }
+        void OffFocus(object s, EventArgs e)
+        {
+            TextBox oneTextbox = s as TextBox;
+            if (oneTextbox.Text == "")
+            {
+                oneTextbox.Text = oneTextbox.Tag.ToString();
+                oneTextbox.Foreground = new SolidColorBrush(Colors.Gray);
+            }
         }
         async void AddCake(object s, EventArgs e)
         {
