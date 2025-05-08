@@ -9,7 +9,7 @@ using System.Net.Http;
 
 namespace _2_14fi_WPF_Cukraszda
 {
-    class ServerConnection
+    public class ServerConnection
     {
         private HttpClient client = new HttpClient();
         private string baseURL = "";

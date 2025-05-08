@@ -1,0 +1,39 @@
+﻿<Window x:Class="_2_14fi_WPF_Cukraszda.CakeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_2_14fi_WPF_Cukraszda"
+        mc:Ignorable="d"
+        Title="CakeWindow" Height="400" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Name="CakeName" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25"/>
+        <Image Name="CakePic" Grid.Row="1"/>
+        <TextBlock Padding="7" Grid.Row="2" FontSize="14" Name="CakeDesc" TextAlignment="Justify" TextWrapping="Wrap"/>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+            </Grid.ColumnDefinitions>
+            <TextBox BorderBrush="Black" Margin="3,0,0,0" Name="CakeCount"/>
+            <Button Content="+" Grid.Column="1" Margin="3" FontSize="20" Click="More"/>
+            <Button Content="-" Grid.Column="2" Margin="3" FontSize="20" Click="Less"/>
+        </Grid>
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Content="Hozzáadás" Margin="20 5" Click="Add"/>
+            <Button Content="Mégse" Grid.Column="1" Margin="20 5" Click="Cancel"/>
+        </Grid>
+    </Grid>
+</Window>
