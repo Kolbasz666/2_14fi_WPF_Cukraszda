@@ -38,7 +38,7 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Label Grid.ColumnSpan="2" Content="Kosár" FontSize="25" Cursor="Hand" BorderBrush="Black" BorderThickness="1"/>
+                <Label Grid.ColumnSpan="2" Content="Kosár" FontSize="25" Cursor="Hand" BorderBrush="Black" BorderThickness="1" MouseLeftButtonUp="CartClick"/>
                 <Border Grid.Column="1" Width="40" CornerRadius="10" Margin="0 10 0 10" Name="CartBorder">
                     <Label Name="CartNumber"/>
                 </Border>

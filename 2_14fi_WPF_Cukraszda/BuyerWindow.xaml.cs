@@ -81,6 +81,16 @@ namespace _2_14fi_WPF_Cukraszda
                 Items.Children.Add(oneCake);
             }
         }
+        async void CartClick(object s, EventArgs e) {
+            //MessageBox.Show("megy");
+            if (Cart.cart.Count == 0)
+            {
+                MessageBox.Show("Nem vettél még semmit");
+                return;
+            }
+            await connection.BuyCakes();
+
+        }
         void CartChanged(object s, EventArgs e) {
             if (Cart.cart.Count > 0)
             {
