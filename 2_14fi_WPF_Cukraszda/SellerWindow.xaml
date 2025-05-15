@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_2_14fi_WPF_Cukraszda"
         mc:Ignorable="d"
-        Title="SellerWindow" Height="500" Width="400">
+        Title="SellerWindow" Height="500" Width="1000">
     <Window.Resources>
         <Style TargetType="Label">
             <Setter Property="VerticalContentAlignment" Value="Center"/>
@@ -21,24 +21,40 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
+            <ColumnDefinition  Width="400"/>
         </Grid.ColumnDefinitions>
-        <TextBox Grid.Column="1" Grid.Row="0" Name="NameInput" Loaded="OffFocus" GotFocus="OnFocus" LostFocus="OffFocus" Tag="Süti neve"/>
-        <TextBox Grid.Column="1" Grid.Row="1" Name="PicrureInput" Loaded="OffFocus" GotFocus="OnFocus" LostFocus="OffFocus" Tag="Kép url"/>
-        <TextBox Grid.Column="1" Grid.Row="2" Name="DescriptionInput" Loaded="OffFocus" GotFocus="OnFocus" LostFocus="OffFocus" Tag="Leírás"/>
-        <TextBox Grid.Column="1" Grid.Row="3" Name="AllergenesInput" Loaded="OffFocus" GotFocus="OnFocus" LostFocus="OffFocus" Tag="Allergén"/>
-        <TextBox Grid.Column="1" Grid.Row="4" Name="PriceInput" Loaded="OffFocus" GotFocus="OnFocus" LostFocus="OffFocus" Tag="Ár"/>
-        <TextBox Grid.Column="1" Grid.Row="5" Name="StockInput" Loaded="OffFocus" GotFocus="OnFocus" LostFocus="OffFocus" Tag="Tárolt mennyiség"/>
-        <Button Grid.ColumnSpan="2" Content="Sütemény hozzáadása" Click="AddCake" Grid.Row="6"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Label Content="Raktárkészlet frissítés"/>
+            <StackPanel Grid.Row="1" Name="cakeList"/>
+            <Button Content="Mentés" Click="Save" Grid.Row="2"/>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="1" Grid.Row="0" Name="NameInput" Loaded="OffFocus" GotFocus="OnFocus" LostFocus="OffFocus" Tag="Süti neve"/>
+            <TextBox Grid.Column="1" Grid.Row="1" Name="PicrureInput" Loaded="OffFocus" GotFocus="OnFocus" LostFocus="OffFocus" Tag="Kép url"/>
+            <TextBox Grid.Column="1" Grid.Row="2" Name="DescriptionInput" Loaded="OffFocus" GotFocus="OnFocus" LostFocus="OffFocus" Tag="Leírás"/>
+            <TextBox Grid.Column="1" Grid.Row="3" Name="AllergenesInput" Loaded="OffFocus" GotFocus="OnFocus" LostFocus="OffFocus" Tag="Allergén"/>
+            <TextBox Grid.Column="1" Grid.Row="4" Name="PriceInput" Loaded="OffFocus" GotFocus="OnFocus" LostFocus="OffFocus" Tag="Ár"/>
+            <TextBox Grid.Column="1" Grid.Row="5" Name="StockInput" Loaded="OffFocus" GotFocus="OnFocus" LostFocus="OffFocus" Tag="Tárolt mennyiség"/>
+            <Button Grid.ColumnSpan="2" Content="Sütemény hozzáadása" Click="AddCake" Grid.Row="6"/>
+        </Grid>
     </Grid>
 </Window>
