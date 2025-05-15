@@ -10,5 +10,6 @@ namespace _2_14fi_WPF_Cukraszda
     public class Cart
     {
         public static ObservableCollection<Cake> cart = new ObservableCollection<Cake>();
+        public static ObservableCollection<Cake> delivery = new ObservableCollection<Cake>();
     }
 }
